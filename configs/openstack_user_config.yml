@@ -1,13 +1,13 @@
 ---
 cidr_networks:
-  container: 192.168.1.0/26 # 192.168.1.0 - 192.168.1.63
+  container: 192.168.1.64/26 # 192.168.1.65 - 192.168.1.127
 
 used_ips:
   - "192.168.1.0,192.168.1.24" # lab metal hosts
 
 global_overrides:
-  internal_lb_vip_address: 192.168.1.21 #192.168.1.129
-  external_lb_vip_address: 192.168.1.21 #192.168.1.129
+  internal_lb_vip_address: 192.168.1.22 
+  external_lb_vip_address: 192.168.1.22 
   management_bridge: "br-mgmt"
 
   provider_networks:
@@ -29,40 +29,40 @@ global_overrides:
         container_interface: "eth12"
         container_type: "veth"
         type: "vlan"
-        range: "102:199"
+        range: "200:210"
         net_name: "physnet1"
 
 shared-infra_hosts:
   man2.oslab:
-    ip: 192.168.1.21
+    ip: 192.168.1.22
 
 repo-infra_hosts:
   man2.oslab:
-    ip: 192.168.1.21
+    ip: 192.168.1.22
 
 os-infra_hosts:
   man2.oslab:
     affinity:
       heat_apis_container: 0
       heat_engine_container: 0
-    ip: 192.168.1.21
+    ip: 192.168.1.22
 
 identity_hosts:
   man2.oslab:
-    ip: 192.168.1.21
+    ip: 192.168.1.22
 
 network_hosts:
   man2.oslab:
-    ip: 192.168.1.21
+    ip: 192.168.1.22
 
 compute_hosts:
   comp1.oslab:
-    ip: 192.168.1.23
+    ip: 192.168.1.24
 
 haproxy_hosts:
   man2.oslab:
-    ip: 192.168.1.21
+    ip: 192.168.1.22
 
 log_hosts:
   man2.oslab:
-    ip: 192.168.1.21
+    ip: 192.168.1.22

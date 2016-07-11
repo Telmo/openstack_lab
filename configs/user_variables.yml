@@ -33,5 +33,5 @@ neutron_ml2_drivers_type: "flat,vlan"
 neutron_provider_networks:
   network_flat_networks: "*"
   network_types: "vlan"
-  network_vlan_ranges: "physnet1:102:199"
+  network_vlan_ranges: "physnet1:200:210"
   network_mappings: "physnet1:br-provider"
